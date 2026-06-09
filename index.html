@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Church Bulletins</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #ffffff;
+      color: #111111;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      padding: 48px 20px 80px;
+    }
+
+    .page-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 36px;
+    }
+
+    header h1 {
+      font-family: 'EB Garamond', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      margin-bottom: 4px;
+    }
+
+    header p {
+      font-size: 0.875rem;
+      color: #555;
+    }
+
+    .rule {
+      border: none;
+      border-top: 1px solid #111111;
+      margin: 28px 0;
+    }
+
+    .current-label {
+      display: inline-block;
+      background: #333333;
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      margin-bottom: 10px;
+    }
+
+    .current-card {
+      background: #f2f2f2;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .current-card .card-info h2 {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .current-card .card-info span {
+      font-size: 0.83rem;
+      color: #555;
+    }
+
+    .btn-current {
+      flex-shrink: 0;
+      background: #111111;
+      color: #ffffff;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 9px 18px;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+
+    .btn-current:hover { background: #333; }
+
+    .archive-heading {
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      font-style: italic;
+      color: #444;
+      margin-bottom: 14px;
+    }
+
+    .month-tag {
+      display: inline-block;
+      background: #333333;
+      color: #ffffff;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    .archive-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .archive-list li {
+      background: #f2f2f2;
+    }
+
+    .archive-list li a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 13px 20px;
+      text-decoration: none;
+      color: #111;
+      transition: background 0.12s;
+    }
+
+    .archive-list li a:hover {
+      background: #e6e6e6;
+    }
+
+    .archive-list li a .a-date {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.05rem;
+    }
+
+    .archive-list li a .a-arrow {
+      font-size: 0.75rem;
+      color: #888;
+    }
+
+    footer {
+      margin-top: 52px;
+      font-size: 0.78rem;
+      color: #aaa;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+
+    <header>
+      <h1>Church Bulletins</h1>
+      <p>Weekly order of service &amp; announcements</p>
+    </header>
+
+    <hr class="rule" />
+
+    <div class="current-label">Current</div>
+    <div class="current-card">
+      <div class="card-info">
+        <h2>June 14, 2026</h2>
+        <span>Lord's Day Morning Worship</span>
+      </div>
+      <a class="btn-current" href="https://ct20260331.github.io/church-bulletins/bulletin-2026-06-14.html" target="_blank" rel="noopener">Open ↗</a>
+    </div>
+
+    <hr class="rule" />
+
+    <p class="archive-heading">Past bulletins</p>
+
+    <div class="month-tag" style="margin-top:0">June 2026</div>
+    <ul class="archive-list">
+      <li><a href="https://ct20260331.github.io/church-bulletins/bulletin-2026-06-07.html" target="_blank" rel="noopener"><span class="a-date">June 7, 2026</span><span class="a-arrow">↗</span></a></li>
+    </ul>
+
+    <div class="month-tag">May 2026</div>
+    <ul class="archive-list">
+      <li><a href="https://ct20260331.github.io/church-bulletins/bulletin-2026-05-31.html" target="_blank" rel="noopener"><span class="a-date">May 31, 2026</span><span class="a-arrow">↗</span></a></li>
+      <li><a href="https://ct20260331.github.io/church-bulletins/bulletin-2026-05-24.html" target="_blank" rel="noopener"><span class="a-date">May 24, 2026</span><span class="a-arrow">↗</span></a></li>
+      <li><a href="https://ct20260331.github.io/church-bulletins/bulletin-2026-05-17.html" target="_blank" rel="noopener"><span class="a-date">May 17, 2026</span><span class="a-arrow">↗</span></a></li>
+      <li><a href="https://ct20260331.github.io/church-bulletins/bulletin-2026-05-10.html" target="_blank" rel="noopener"><span class="a-date">May 10, 2026</span><span class="a-arrow">↗</span></a></li>
+      <li><a href="https://ct20260331.github.io/church-bulletins/bulletin-2026-05-03.html" target="_blank" rel="noopener"><span class="a-date">May 3, 2026</span><span class="a-arrow">↗</span></a></li>
+    </ul>
+
+    <div class="month-tag">April 2026</div>
+    <ul class="archive-list">
+      <li><a href="https://ct20260331.github.io/church-bulletins/bulletin-2026-04-26.html" target="_blank" rel="noopener"><span class="a-date">April 26, 2026</span><span class="a-arrow">↗</span></a></li>
+      <li><a href="https://ct20260331.github.io/church-bulletins/bulletin-2026-04-19.html" target="_blank" rel="noopener"><span class="a-date">April 19, 2026</span><span class="a-arrow">↗</span></a></li>
+      <li><a href="https://ct20260331.github.io/church-bulletins/bulletin-2026-04-12.html" target="_blank" rel="noopener"><span class="a-date">April 12, 2026</span><span class="a-arrow">↗</span></a></li>
+      <li><a href="https://ct20260331.github.io/church-bulletins/bulletin-2026-04-05.html" target="_blank" rel="noopener"><span class="a-date">April 5, 2026</span><span class="a-arrow">↗</span></a></li>
+    </ul>
+
+    <div class="month-tag">March 2026</div>
+    <ul class="archive-list">
+      <li><a href="https://ct20260331.github.io/church-bulletins/bulletin-2026-03-29.html" target="_blank" rel="noopener"><span class="a-date">March 29, 2026</span><span class="a-arrow">↗</span></a></li>
+    </ul>
+
+    <hr class="rule" />
+
+    <footer>ct20260331.github.io/church-bulletins</footer>
+
+  </div>
+</body>
+</html>
