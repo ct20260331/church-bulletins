@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-1, initial-scale=1.0"/>
+<title>Matthew 20:20–28 — Family Worship</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --parchment: #f5f0e8;
+    --parchment-dark: #e8e0cc;
+    --ink: #1a1408;
+    --ink-mid: #3a2e18;
+    --ink-light: #6b5c3e;
+    --gold: #8b6914;
+    --gold-light: #c9a84c;
+    --red: #7a1a1a;
+    --toc-bg: #2a1f0e;
+    --toc-text: #f0e6cc;
+    --socratic-bg: #1a2c1a;
+    --socratic-border: #3a7a3a;
+    --socratic-text: #e8f5e8;
+    --xref-bg: #1a1f2c;
+    --xref-border: #3a4a7a;
+    --xref-text: #e8ecf5;
+    --accent: #5c3d0a;
+    --timer-bg: #2a1f0e;
+    --timer-text: #c9a84c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  /* ── STICKY TOC ── */
+  #toc-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--toc-bg);
+    padding: 0.4rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 3px solid var(--gold);
+  }
+  #toc-bar label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    color: var(--gold-light);
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+  #toc-select {
+    flex: 1;
+    background: #3a2e18;
+    color: var(--toc-text);
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    padding: 0.3rem 0.5rem;
+    font-family: 'EB Garamond', serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+  #toc-select:focus { outline: 2px solid var(--gold-light); }
+
+  /* ── LAYOUT ── */
+  .page-wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  /* ── HEADINGS ── */
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.75rem;
+    color: var(--red);
+    text-align: center;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.04em;
+  }
+  .subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    color: var(--ink-light);
+    text-align: center;
+    letter-spacing: 0.12em;
+    margin-bottom: 1.75rem;
+  }
+  h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    color: var(--red);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 0.3rem;
+    margin: 2rem 0 0.9rem;
+  }
+
+  /* ── PASSAGE BLOCK ── */
+  .passage-block {
+    background: var(--parchment-dark);
+    border-left: 5px solid var(--gold);
+    border-radius: 4px;
+    padding: 1.1rem 1.4rem;
+    margin: 0.75rem 0 1.5rem;
+    font-style: italic;
+    color: var(--ink-mid);
+  }
+  .passage-block .verse-num {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 0.8rem;
+    vertical-align: super;
+    margin-right: 0.15em;
+    font-family: 'Cinzel', serif;
+  }
+
+  /* ── QUESTION CARD ── */
+  .q-card {
+    margin: 1.75rem 0;
+    border: 1px solid #d4c8a8;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #faf7f0;
+  }
+  .q-header {
+    background: var(--ink);
+    color: #f0e6cc;
+    padding: 0.6rem 1.1rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+  }
+  .q-question {
+    padding: 0.8rem 1.1rem 0.4rem;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--red);
+    border-bottom: 1px dashed #c8b87a;
+  }
+
+  /* ── SOCRATIC BLOCK (ALWAYS VISIBLE) ── */
+  aside.socratic-block {
+    background: var(--socratic-bg);
+    border-left: 6px solid var(--socratic-border);
+    color: var(--socratic-text);
+    padding: 0.9rem 1.1rem;
+    margin: 0.75rem 1.1rem;
+    border-radius: 4px;
+  }
+  .socratic-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: #7fcf7f;
+    margin-bottom: 0.35rem;
+    display: block;
+    font-weight: 700;
+  }
+  .socratic-q {
+    font-weight: 700;
+    font-size: 0.98rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+  }
+  .socratic-a {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #c8f0c8;
+    border-top: 1px solid #3a6a3a;
+    padding-top: 0.35rem;
+    margin-top: 0.35rem;
+  }
+
+  /* ── CROSS-REFERENCE BLOCK (ALWAYS VISIBLE) ── */
+  .xref-block {
+    background: var(--xref-bg);
+    border-left: 6px solid var(--xref-border);
+    color: var(--xref-text);
+    padding: 0.85rem 1.1rem;
+    margin: 0.75rem 1.1rem;
+    border-radius: 4px;
+  }
+  .xref-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: #9aafe8;
+    margin-bottom: 0.4rem;
+    display: block;
+    font-weight: 700;
+  }
+  .xref-entry {
+    margin-bottom: 0.55rem;
+    font-size: 0.93rem;
+  }
+  .xref-entry:last-child { margin-bottom: 0; }
+  .xref-ref {
+    font-family: 'Cinzel', serif;
+    font-size: 0.77rem;
+    color: #7a9ad8;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.12rem;
+  }
+  .xref-text {
+    font-style: italic;
+    color: #d0d8f0;
+    line-height: 1.55;
+  }
+
+  /* ── ACCORDION (main answers only) ── */
+  details.answer-accordion {
+    margin: 0.75rem 1.1rem 1rem;
+    border: 1px solid #c4b47a;
+    border-radius: 4px;
+    background: #f5f0e4;
+  }
+  details.answer-accordion summary {
+    background: var(--gold);
+    color: var(--ink);
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    padding: 0.45rem 0.9rem;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 3px 3px 0 0;
+    list-style: none;
+  }
+  details.answer-accordion summary::-webkit-details-marker { display: none; }
+  details.answer-accordion summary::before { content: "▶ "; font-size: 0.68rem; }
+  details.answer-accordion[open] summary::before { content: "▼ "; }
+  details.answer-accordion .answer-body {
+    padding: 0.85rem 1.1rem;
+    color: var(--ink-mid);
+    font-size: 0.96rem;
+    line-height: 1.8;
+    border-top: 1px solid #c4b47a;
+  }
+  details.answer-accordion .answer-body p { margin-bottom: 0.65rem; }
+  details.answer-accordion .answer-body p:last-child { margin-bottom: 0; }
+
+  /* ── TIMER BADGE ── */
+  .timer-badge {
+    display: inline-block;
+    background: var(--timer-bg);
+    color: var(--timer-text);
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    padding: 0.18rem 0.65rem;
+    border-radius: 20px;
+    border: 1px solid var(--gold);
+    margin: 0.5rem 0 0.2rem 1.1rem;
+  }
+
+  /* ── MEMORY VERSE ── */
+  .memory-verse-box {
+    background: var(--toc-bg);
+    color: #f0e6cc;
+    border: 3px solid var(--gold);
+    border-radius: 8px;
+    padding: 1.3rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  .memory-verse-box .mv-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    color: var(--gold-light);
+    margin-bottom: 0.6rem;
+  }
+  .memory-verse-box .mv-text {
+    font-style: italic;
+    font-size: 1.08rem;
+    line-height: 1.75;
+    margin-bottom: 0.6rem;
+  }
+  .memory-verse-box .mv-ref {
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    color: var(--gold-light);
+    letter-spacing: 0.1em;
+  }
+
+  /* ── SECTION DIVIDER ── */
+  .section-divider {
+    text-align: center;
+    color: var(--gold);
+    margin: 2rem 0 0.75rem;
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+  }
+
+  /* ── SCROLL ANCHOR ── */
+  .scroll-anchor {
+    display: block;
+    height: 0;
+    margin-top: -4rem;
+    padding-top: 4rem;
+    pointer-events: none;
+  }
+
+  /* ── BIBLIOGRAPHY ── */
+  .bib-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.7rem;
+    font-size: 0.91rem;
+  }
+  .bib-table th {
+    background: var(--ink);
+    color: var(--gold-light);
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    padding: 0.45rem 0.75rem;
+    text-align: left;
+  }
+  .bib-table td {
+    padding: 0.45rem 0.75rem;
+    border-bottom: 1px solid #d4c8a8;
+    vertical-align: top;
+    color: var(--ink-mid);
+  }
+  .bib-table tr:nth-child(even) td { background: #ece5d0; }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY TOC -->
+<nav id="toc-bar" aria-label="Table of Contents">
+  <label for="toc-select">⛪ GO TO →</label>
+  <select id="toc-select" onchange="document.getElementById(this.value).scrollIntoView({behavior:'smooth'}); this.value='';">
+    <option value="">— Table of Contents —</option>
+    <option value="passage">📜 Passage — Matthew 20:20–28 (BSB)</option>
+    <option value="q8">Q1 · What was wrong with the request?</option>
+    <option value="q9">Q2 · What is the "cup"?</option>
+    <option value="q10">Q3 · Does "not Mine to grant" make Jesus less than the Father?</option>
+    <option value="q11">Q4 · What is true greatness in the kingdom?</option>
+    <option value="q12">Q5 · What is the "ransom for many"?</option>
+    <option value="memory">✦ Memory Verse</option>
+    <option value="bibliography">📚 Bibliography</option>
+  </select>
+</nav>
+
+<div class="page-wrap">
+
+  <h1>Matthew 20:20–28 — Family Worship</h1>
+  <p class="subtitle">THE REQUEST OF JAMES &amp; JOHN · 1689 SECOND LONDON BAPTIST CONFESSION</p>
+
+  <!-- ══════ PASSAGE ══════ -->
+  <span class="scroll-anchor" id="passage"></span>
+  <h2>📜 Matthew 20:20–28 (BSB)</h2>
+  <div class="passage-block">
+    <span class="verse-num">20</span>Then the mother of Zebedee's sons came to Jesus with her sons. Kneeling down, she asked a favor of Him. <span class="verse-num">21</span>"What do you want?" He asked. She said, "Promise me that one of these two sons of mine may sit at Your right hand and the other at Your left in Your kingdom." <span class="verse-num">22</span>"You don't know what you are asking," Jesus replied. "Can you drink the cup I am about to drink?" "We can," they answered. <span class="verse-num">23</span>"You will indeed drink My cup," He told them, "but to sit at My right or left is not Mine to grant. These seats belong to those for whom they have been prepared by My Father." <span class="verse-num">24</span>When the ten disciples heard this, they were indignant toward the two brothers. <span class="verse-num">25</span>But Jesus called them together and said, "You know that the rulers of the Gentiles lord it over them, and their superiors exercise authority over them. <span class="verse-num">26</span>It shall not be so among you. Instead, whoever wants to be great among you must be your servant, <span class="verse-num">27</span>and whoever wants to be first among you must be your slave— <span class="verse-num">28</span>just as the Son of Man did not come to be served, but to serve, and to give His life as a ransom for many."
+  </div>
+
+  <!-- word count note: passage text ~170 words; counts toward total -->
+  <span class="timer-badge">📖 After passage — ~170 words · ~1:20 elapsed</span>
+
+  <!-- ══════ Q1 ══════ -->
+  <div class="section-divider">✦ ✦ ✦</div>
+  <span class="scroll-anchor" id="q8"></span>
+  <div class="q-card">
+    <div class="q-header">QUESTION 1 · Matthew 20:20–22</div>
+    <div class="q-question">What was wrong with the request that the mother of James and John made?</div>
+
+    <aside class="socratic-block">
+      <span class="socratic-label">🔹 SOCRATIC HINT — Read vv. 17–19, then vv. 20–21</span>
+      <p class="socratic-q">Jesus has just finished telling His disciples He is about to be mocked, flogged, and crucified. Then immediately the mother of James and John asks for throne seats. What does that timing reveal about what kind of kingdom they were still imagining?</p>
+      <p class="socratic-a">→ They were still imagining an earthly kingdom of power and honour — they had completely missed that the path to Christ's glory runs through the cross.</p>
+    </aside>
+
+    <aside class="socratic-block">
+      <span class="socratic-label">🔹 SOCRATIC HINT</span>
+      <p class="socratic-q">Verse 23 says the seats of honour "belong to those for whom they have been prepared by My Father." If God's eternal decree already determines who stands nearest to Christ in glory, what does a prayer trying to re-negotiate that reveal about the one praying?</p>
+      <p class="socratic-a">→ It reveals ignorance of both God's sovereignty and the true nature of the kingdom — we cannot lobby God to override what He has eternally decreed.</p>
+    </aside>
+
+    <span class="timer-badge">📖 After Q1 — ~330 words · ~2:32 elapsed</span>
+
+    <details class="answer-accordion">
+      <summary>FULL ANSWER (Reference — hidden, does not affect timing)</summary>
+      <div class="answer-body">
+        <p>The request had two serious errors. First, it showed a completely carnal, earthly understanding of Christ's kingdom — as if the highest positions in it were thrones of worldly honour to be secured by a well-placed petition from the right person (their mother). Second, it presumed that the Father's secret decrees about who stands nearest to Christ in glory could be altered by a human request. Both errors come from the same root: a failure to understand that the kingdom of heaven is not run on the same principles as the kingdoms of this world.</p>
+        <p>Christ's response redirects their ambition entirely: He does not say "bad timing, ask again later." He asks whether they are prepared to drink the cup He is about to drink — the cup of suffering — because the path to glory in His kingdom runs through the cross, not around it.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- ══════ Q2 ══════ -->
+  <span class="scroll-anchor" id="q9"></span>
+  <div class="q-card">
+    <div class="q-header">QUESTION 2 · Matthew 20:22–23</div>
+    <div class="q-question">What is the "cup" Jesus speaks of — and did James and John understand what they were agreeing to?</div>
+
+    <aside class="socratic-block">
+      <span class="socratic-label">🔹 SOCRATIC HINT — Search the Old Testament</span>
+      <p class="socratic-q">Read Psalm 75:8 and Isaiah 51:17 below. In those passages, what does God's "cup" represent — is it something pleasant, or something terrifying?</p>
+      <p class="socratic-a">→ It is the cup of God's wrath against sin — something terrifying, not merely a symbol of gentle hardship.</p>
+    </aside>
+
+    <div class="xref-block">
+      <span class="xref-label">📖 CROSS-REFERENCES</span>
+      <div class="xref-entry">
+        <span class="xref-ref">Psalm 75:8 (BSB)</span>
+        <span class="xref-text">"For in the LORD's hand is a cup full of foaming wine mixed with spices; He pours it out, and all the wicked of the earth drink it down to the very dregs."</span>
+      </div>
+      <div class="xref-entry">
+        <span class="xref-ref">Isaiah 51:17 (BSB)</span>
+        <span class="xref-text">"Awake, awake! Rise up, O Jerusalem, you who have drunk from the hand of the LORD the cup of His wrath, you who have drained to its dregs the goblet that makes men stagger."</span>
+      </div>
+      <div class="xref-entry">
+        <span class="xref-ref">John 18:11 (BSB)</span>
+        <span class="xref-text">"Jesus said to Peter, 'Put your sword away! Shall I not drink the cup the Father has given Me?'"</span>
+      </div>
+      <div class="xref-entry">
+        <span class="xref-ref">Acts 12:2 (BSB)</span>
+        <span class="xref-text">"He had James, the brother of John, put to death with the sword."</span>
+      </div>
+    </div>
+
+    <aside class="socratic-block">
+      <span class="socratic-label">🔹 SOCRATIC HINT</span>
+      <p class="socratic-q">James was later killed by Herod (Acts 12:2) and John was exiled to the island of Patmos. So did they in fact "drink the cup" — and what does that tell us about how seriously Christ meant what He said?</p>
+      <p class="socratic-a">→ Yes, they actually did share in Christ's sufferings through persecution and death — Christ's word always comes to pass, even when the one who first hears it doesn't fully grasp it.</p>
+    </aside>
+
+    <span class="timer-badge">📖 After Q2 — ~600 words · ~4:37 elapsed</span>
+
+    <details class="answer-accordion">
+      <summary>FULL ANSWER (Reference — hidden, does not affect timing)</summary>
+      <div class="answer-body">
+        <p>The "cup" is first and foremost the cup of God's wrath against sin which Christ, as the covenant surety and substitute for His people, would drain completely at Calvary (Psalm 75:8; Isaiah 51:17; John 18:11). No one but Christ could drink that cup in its fullness — He drank it so that His people never have to. But the cup also refers to the suffering and persecution that all of Christ's followers must share in union with Him.</p>
+        <p>James and John said "We can" without grasping what they were saying. Yet God in His sovereignty ensured they did indeed drink it: James through martyrdom (Acts 12:2) and John through decades of suffering and exile on Patmos. Christ's words are never empty — they accomplish exactly what He intends, even across years and circumstances the speaker did not fully see.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- ══════ Q3 ══════ -->
+  <span class="scroll-anchor" id="q10"></span>
+  <div class="q-card">
+    <div class="q-header">QUESTION 3 · Matthew 20:23</div>
+    <div class="q-question">Jesus says the seats of honour "belong to those for whom they have been prepared by My Father." Does this mean Jesus doesn't know, or that He is less than the Father?</div>
+
+    <aside class="socratic-block">
+      <span class="socratic-label">🔹 SOCRATIC HINT — Think about roles and nature separately</span>
+      <p class="socratic-q">The 1689 Confession teaches that the Father, Son, and Holy Spirit are one God, fully equal in power, knowledge, and glory. But when the Son came to earth as the Mediator, He voluntarily took on a role of obeying the Father's will. Can a person be fully equal in dignity to someone while still acting within that person's authority in a specific role?</p>
+      <p class="socratic-a">→ Yes — just as an ambassador is fully equal in dignity to the king who sends him while still acting within the king's instructions and not issuing royal decrees on his own.</p>
+    </aside>
+
+    <div class="xref-block">
+      <span class="xref-label">📖 CROSS-REFERENCES</span>
+      <div class="xref-entry">
+        <span class="xref-ref">Ephesians 1:4–5 (BSB)</span>
+        <span class="xref-text">"For He chose us in Him before the foundation of the world to be holy and blameless in His presence. In love He predestined us for adoption as His sons through Jesus Christ, according to the good pleasure of His will."</span>
+      </div>
+      <div class="xref-entry">
+        <span class="xref-ref">1689 Confession, Ch. 2 &amp; Ch. 8</span>
+        <span class="xref-text">"In this divine and infinite Being there are three subsistences, the Father, the Word or Son, and Holy Spirit, of one substance, power, and eternity, each having the whole divine essence…" (Ch. 2) — and Ch. 8 establishes Christ's willing mediatorial subordination in the work of redemption.</span>
+      </div>
+    </div>
+
+    <span class="timer-badge">📖 After Q3 — ~840 words · ~6:28 elapsed</span>
+
+    <details class="answer-accordion">
+      <summary>FULL ANSWER (Reference — hidden, does not affect timing)</summary>
+      <div class="answer-body">
+        <p>This verse is not a denial of Christ's deity or a statement of ignorance. Rather, it is an expression of Christ's voluntary mediatorial subordination in the economy of redemption. As the God-Man — fully God and fully Man, acting in His office as Mediator — Jesus speaks of the Father's prerogative as distinct from His own role as Mediator. The seats of nearest glory in the kingdom have been prepared by the Father's sovereign decree from eternity (Ephesians 1:4–5), and Christ in His mediatorial role acts within those determined purposes.</p>
+        <p>John Gill carefully notes that this does not suggest any ignorance in the eternal Son. Rather, it reflects the Trinitarian covenant of redemption in which the Father decrees, the Son executes, and the Spirit applies. The 1689 Confession (Ch. 2) is clear that all three Persons are fully equal in divine essence; yet in the economy of salvation, the Son willingly takes the role of the obedient Mediator (Ch. 8). Both are true simultaneously and neither cancels the other.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- ══════ Q4 ══════ -->
+  <span class="scroll-anchor" id="q11"></span>
+  <div class="q-card">
+    <div class="q-header">QUESTION 4 · Matthew 20:25–27</div>
+    <div class="q-question">What does Christ teach about true greatness in His kingdom, and what needs to happen inside a person before they can actually live this way?</div>
+
+    <aside class="socratic-block">
+      <span class="socratic-label">🔹 SOCRATIC HINT — Contrast the two models</span>
+      <p class="socratic-q">Jesus describes two models of greatness in vv. 25–27: the Gentile rulers "lord it over" people, and Christ's alternative is to become a servant, even a slave. Be honest — which of those two comes naturally to a fallen human heart, and which requires something to change first?</p>
+      <p class="socratic-a">→ Lording it over others comes naturally to a fallen heart — genuine servanthood requires the heart to be changed from the inside by something beyond the person's own power.</p>
+    </aside>
+
+    <aside class="socratic-block">
+      <span class="socratic-label">🔹 SOCRATIC HINT</span>
+      <p class="socratic-q">Jesus doesn't just command servanthood — He says "just as the Son of Man… came to serve." Why does it matter that the model for this is not a great human example, but the eternal Son of God Himself?</p>
+      <p class="socratic-a">→ Because it means Christlike servanthood is not a human achievement to copy but a divine pattern that can only be reproduced in us by the Spirit of the same Christ who lived it.</p>
+    </aside>
+
+    <div class="xref-block">
+      <span class="xref-label">📖 CROSS-REFERENCE</span>
+      <div class="xref-entry">
+        <span class="xref-ref">Philippians 2:5–7 (BSB)</span>
+        <span class="xref-text">"Let your attitude be the same as that of Christ Jesus: Who, being in very nature God, did not consider equality with God something to be grasped, but made Himself nothing, taking the very nature of a servant, being made in human likeness."</span>
+      </div>
+    </div>
+
+    <span class="timer-badge">📖 After Q4 — ~1,090 words · ~8:23 elapsed</span>
+
+    <details class="answer-accordion">
+      <summary>FULL ANSWER (Reference — hidden, does not affect timing)</summary>
+      <div class="answer-body">
+        <p>True greatness in Christ's kingdom is defined as servanthood — the deliberate choosing of the lowest place for the good of others. The ruler of the Gentiles defines greatness as power over others; Christ defines it as placing oneself under others for their benefit. This is the great reversal that runs through the whole of Matthew 20 and the whole of the Gospel: the last shall be first, the servant shall be great.</p>
+        <p>Benjamin Keach rightly emphasised that this spirit of servanthood is not natural to fallen human beings. We are by nature curved inward, self-serving, and status-seeking. The capacity to genuinely prefer another's good over our own advancement is a fruit of the Holy Spirit — a direct result of the same sovereign grace that regenerates the heart. And the supreme model is Christ Himself (Philippians 2:5–7), the eternal Son who became a slave for our redemption. We are not merely to admire this example at a distance; the Spirit conforms us to it from the inside out, making us like the Servant-King we worship.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- ══════ Q5 ══════ -->
+  <span class="scroll-anchor" id="q12"></span>
+  <div class="q-card">
+    <div class="q-header">QUESTION 5 · Matthew 20:28</div>
+    <div class="q-question">What is the "ransom for many" — and who exactly are "the many" that Christ died for?</div>
+
+    <aside class="socratic-block">
+      <span class="socratic-label">🔹 SOCRATIC HINT — Study the Greek word</span>
+      <p class="socratic-q">The Greek behind "ransom" is λύτρον ἀντί — "a price paid instead of / in the place of." If Christ paid a price in someone's place, what does that mean about the people He paid it for — are they merely given a chance, or actually set free?</p>
+      <p class="socratic-a">→ They are actually and certainly set free — a ransom paid in someone's place actually secures their release, it doesn't merely make release possible.</p>
+    </aside>
+
+    <aside class="socratic-block">
+      <span class="socratic-label">🔹 SOCRATIC HINT — Check Isaiah 53</span>
+      <p class="socratic-q">Read Isaiah 53:11–12 below. The Servant "bears the iniquities" of "the many" and makes them righteous. Does this sound like God merely offering a chance of forgiveness to everyone, or like an actual, effective removal of sin from a specific people?</p>
+      <p class="socratic-a">→ It is an actual, effective removal of sin from a specific people — the Servant truly bears and takes away their iniquities, He does not merely make bearing them possible.</p>
+    </aside>
+
+    <div class="xref-block">
+      <span class="xref-label">📖 CROSS-REFERENCES</span>
+      <div class="xref-entry">
+        <span class="xref-ref">Isaiah 53:11–12 (BSB)</span>
+        <span class="xref-text">"After the anguish of His soul, He will see the light of life and be satisfied; by His knowledge My righteous Servant will justify many, and He will bear their iniquities. Therefore I will give Him the many as His portion, and He will divide the spoils with the strong, because He poured out His life unto death, and was numbered with the transgressors. For He bore the sin of many and made intercession for the transgressors."</span>
+      </div>
+      <div class="xref-entry">
+        <span class="xref-ref">1689 Confession, Ch. 8 §5</span>
+        <span class="xref-text">"The Lord Jesus, by His perfect obedience and sacrifice of Himself… hath fully satisfied the justice of God, procured reconciliation, and purchased an everlasting inheritance in the kingdom of heaven, for all those whom the Father hath given unto Him."</span>
+      </div>
+    </div>
+
+    <span class="timer-badge">📖 After Q5 — ~1,280 words · ~9:50 elapsed</span>
+
+    <details class="answer-accordion">
+      <summary>FULL ANSWER (Reference — hidden, does not affect timing)</summary>
+      <div class="answer-body">
+        <p>The Greek λύτρον ἀντί means a "ransom in the place of" — the language of actual substitution: one person's life standing in for another's. Christ gives His life as the actual payment that releases His people from the debt of sin and the penalty of death.</p>
+        <p>"For many" — John Gill argues carefully that "many" here (echoing Isaiah 53:11–12) does not mean "all without exception." Rather, it means many as distinguished from one — Christ alone versus the entire company of the elect whom He represents and redeems. The word "many" is used in contrast to Christ as the single substitute, not in contrast to "all." The elect are many; the substitute is one. This is what the 1689 Confession (Ch. 8, §5) calls "the purchase of an everlasting inheritance for all those whom the Father hath given unto Him." Christ did not make salvation merely possible for an undefined multitude; He actually and certainly secured it for His people.</p>
+        <p><strong>Redemptive-Historical Note:</strong> Jesus is consciously reading His own death through Isaiah 53. He is the Suffering Servant Israel had been waiting for, and the word "many" is deliberately borrowed from Isaiah's own language. This is Christ interpreting His own mission through Scripture's own terms.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- ══════ MEMORY VERSE ══════ -->
+  <div class="section-divider">✦ ✦ ✦</div>
+  <span class="scroll-anchor" id="memory"></span>
+  <div class="memory-verse-box">
+    <p class="mv-label">✦ MEMORY VERSE — MATTHEW 20:28 (BSB) ✦</p>
+    <p class="mv-text">"just as the Son of Man did not come to be served, but to serve, and to give His life as a ransom for many."</p>
+    <p class="mv-ref">Matthew 20:28</p>
+  </div>
+
+  <span class="timer-badge">📖 End of spoken content — ~1,300 words · ~10:00 total</span>
+
+  <!-- ══════ BIBLIOGRAPHY ══════ -->
+  <div class="section-divider">✦ ✦ ✦</div>
+  <span class="scroll-anchor" id="bibliography"></span>
+  <h2>📚 Bibliography</h2>
+  <table class="bib-table">
+    <thead>
+      <tr><th>Author</th><th>Work &amp; Relevance</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>John Gill</strong></td>
+        <td><em>An Exposition of the New Testament</em>, Vol. 1 (Matthew), commentary on ch. 20 — primary source for all exegetical detail throughout.</td>
+      </tr>
+      <tr>
+        <td><strong>John Gill</strong></td>
+        <td><em>The Cause of God and Truth</em>, Part I — definite atonement and "the many" as the elect company (Q5).</td>
+      </tr>
+      <tr>
+        <td><strong>Benjamin Keach</strong></td>
+        <td><em>The Travel of True Godliness</em>; <em>Gospel Mysteries Unveiled</em> — servanthood as fruit of sovereign grace, not natural virtue (Q4).</td>
+      </tr>
+      <tr>
+        <td><strong>Nehemiah Coxe</strong></td>
+        <td><em>A Discourse of the Covenants</em> — Christ as fulfiller of the eternal covenant of redemption; Father/Son roles in the economy of salvation (Q3).</td>
+      </tr>
+      <tr>
+        <td><strong>Second London Baptist Confession of Faith (1689)</strong></td>
+        <td>Ch. 2 (Trinity), Ch. 8 (Christ the Mediator, esp. §5 on definite atonement) — doctrinal framework for Q3 and Q5.</td>
+      </tr>
+      <tr>
+        <td><strong>Isaiah 52:13–53:12</strong></td>
+        <td>The Suffering Servant — OT redemptive-historical foundation for the "ransom for many" and the cup of wrath (Q2, Q5).</td>
+      </tr>
+      <tr>
+        <td><strong>Scripture (BSB)</strong></td>
+        <td>All Bible quotations from the <em>Berean Standard Bible</em>, public domain as of April 30, 2023.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="text-align:center; color:var(--ink-light); font-size:0.8rem; margin-top:2.25rem; font-style:italic;">
+    Soli Deo Gloria · Matthew 20:20–28 · Family Worship · 1689 Particular Baptist Tradition
+  </p>
+
+</div><!-- end page-wrap -->
+
+<script>
+  document.getElementById('toc-select').addEventListener('change', function() {
+    setTimeout(() => { this.value = ''; }, 300);
+  });
+</script>
+</body>
+</html
