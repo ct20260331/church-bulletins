@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew 22:15-22 — John Gill's Exposition with Clause Summaries</title>
+    <style>
+        :root {
+            --bg-color: #fcfaf2;
+            --text-color: #2b1e16;
+            --accent-color: #8b0000;
+            --divider-color: #e2ded0;
+            --font-stack: "Georgia", "Times New Roman", serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-stack);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px double var(--text-color);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        header h1 {
+            margin: 0 0 10px 0;
+            font-weight: normal;
+            font-size: 2.2rem;
+        }
+        header p {
+            margin: 0;
+            font-style: italic;
+        }
+        .verse-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--divider-color);
+            padding-bottom: 30px;
+        }
+        .verse-row:last-of-type {
+            border-bottom: none;
+        }
+        .verse-label {
+            width: 100%;
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed var(--accent-color);
+            padding-bottom: 5px;
+        }
+        .left-col {
+            flex: 0 0 75%;
+            max-width: 75%;
+            box-sizing: border-box;
+            padding-right: 30px;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+        .right-col {
+            flex: 0 0 25%;
+            max-width: 25%;
+            box-sizing: border-box;
+            padding-left: 30px;
+            border-left: 1px solid var(--divider-color);
+            font-size: 1.05rem;
+        }
+        ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        li:last-child {
+            margin-bottom: 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--text-color);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            .left-col, .right-col {
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding: 0;
+            }
+            .right-col {
+                border-left: none;
+                border-top: 1px dashed var(--divider-color);
+                margin-top: 20px;
+                padding-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Matthew 22:15–22</h1>
+        <p>The Unabridged Exposition of John Gill with Clause-Tracked Summaries</p>
+    </header>
+
+    <!-- VERSE 15 -->
+    <div class="verse-row">
+        <div class="verse-label">Matthew 22:15</div>
+        <div class="left-col">
+            Then went the Pharisees,.... After they had heard the parables of the two sons, of the vineyard let out to husbandmen, and of the marriage feast, which they perceived were spoken against them; they went out from the temple, and from the presence of Christ, not only to hide their resentment, but to consult what ways and means they could to destroy him: and took counsel; among themselves, and with others, their superiors; for this was a grand council, a Sanhedrim that was formed, as appears from Mark 12:13. How they might entangle him in his talk: or "take him in his talk", as in a net, or snare, as the word signifies: or hunt him, as a prey, in his discourse; by putting questions to him, to which if he answered one way, it would bring him into disgrace with the people; and if another, it would expose him to the resentments of the government.
+        </div>
+        <div class="right-col">
+            <ol>
+                <li>The Pharisees depart Christ's presence following his piercing parables to conceal their deep resentment.</li>
+                <li>They convene a formal Sanhedrim council to systematically plot His destruction.</li>
+                <li>They aim to ensnare and hunt His discourse like prey via dangerous, loaded questions.</li>
+                <li>They construct a dilemma to disgrace Him publicly or expose Him to civil treason charges.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- VERSE 16 -->
+    <div class="verse-row">
+        <div class="verse-label">Matthew 22:16</div>
+        <div class="left-col">
+            And they sent out unto him their disciples,.... Who were young men, and had not been seen in these controversies, and so less known: they might hope they would be more easily received, and not be suspected of any ill design; who were trained up in the same principles as their masters, and were as bitter enemies to Christ as they; and no doubt were accompanied by some of the members of the Sanhedrim, who were to be the actors, when the snare was laid. These were sent, with the Herodians; who were either some of the courtiers and servants of Herod, who happened to be now at Jerusalem, because of the feast; or rather a set of men, or a party among the Jews, who were for Herod's government, and paying tribute to the Roman emperor, whose creature Herod was; and were directly opposite to the Pharisees in this matter, who were against paying tribute to a foreign power: and this shows the deep policy and malice of the Pharisees, to send men of such opposite principles, that which way soever the answer was given, they might have an handle against him. If he was for paying tribute, the Pharisees would accuse him to the people, of betraying their liberties, and acting contrary to the law of Moses, and hereby he would lose his interest among them: and if he was against paying it, the Herodians would immediately carry the news to Herod, and he to the Roman governor, and he would be seized as a seditious person, and an enemy to Caesar. Saying, Master; Greek, "Teacher"; they address him as a prophet, with great profound respect, and a show of humility, calling him their master, as well as the master of others: we know that thou art true; a true and faithful teacher, that speaks the truth of God, and does not deceive any man with false doctrine: and teachest the way of God in truth; instructs men in the true worship of God, and in the paths of faith and duty, according to the truth of things, and the word of God: neither carest thou for any man; art not afraid of the numbers, or power, or riches of men: thou art not to be awed by the authority of the civil magistrate, or the grandees of the Sanhedrim; nor art thou to be moved by the clamours of the common people: for thou regardest not the person of men; art no respecter of persons; hast no partiality for one, or against another; dost not flatter the rich and powerful, nor despise the poor and mean, but speakest the truth freely, and actest uprightly, without any biassed affection, or sinister view.
+        </div>
+        <div class="right-col">
+            <ol>
+                <li>The Pharisees deploy their unknown, young disciples alongside bitter members of the Sanhedrim to avoid immediate suspicion.</li>
+                <li>They include the pro-Roman Herodians, structural theological opposites, to ensure a political trap from either possible response.</li>
+                <li>The spies falsely flatter Christ as an authentic teacher of God's ways to disarm His judgment.</li>
+                <li>They commend His fearlessness and impartiality toward civil magistrates, aiming to bait Him into bold, illegal speech.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- VERSE 17 -->
+    <div class="verse-row">
+        <div class="verse-label">Matthew 22:17</div>
+        <div class="left-col">
+            Tell us therefore, what thinkest thou?.... What is thy opinion, judgment, and sentiment in this matter? we have the opinion of one side, and the opinion of the other; what is thine? Is it lawful to give tribute unto Caesar, or not? meaning, according to the law of God. This was a question that was frequently agitated in their schools, and at this time, the people were much divided about it: some maintaining it to be lawful, others that it was not; as the followers of Judas of Galilee, who refused to pay it, and rebelled against the government on that account: the Pharisees were of the same opinion, that it was not lawful, but durst not openly declare it, for fear of the Romans; wherefore they hoped that Christ would have freely and plainly spoke his mind, and have declared against it, and then they had what they wanted.
+        </div>
+        <div class="right-col">
+            <ol>
+                <li>They demand Christ's authoritative opinion on a fierce, contemporary theological debate regarding Roman taxation.</li>
+                <li>The specific query challenges whether paying civil tribute aligns with or violates the Mosaic law.</li>
+                <li>The underlying populace was fractured, influenced heavily by the tax-rebellious factions of Judas of Galilee.</li>
+                <li>The Pharisees secretly opposed the tax but masked their stance, hoping Christ would preach illegal non-compliance.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- VERSE 18 -->
+    <div class="verse-row">
+        <div class="verse-label">Matthew 22:18</div>
+        <div class="left-col">
+            But Jesus perceived their wickedness,.... The Syriac Arabic, and Persic versions read, "their deceit"; and the Ethiopic, "their counsel"; but it means their malice, and internal wickedness, which lay hid under their polite address, and flattering expressions: for he, being the omniscient God, knew their hearts, and saw through all their designs, and the secret springs of their actions, and that they came with an evil intent to ensnare him, however they might pretend a desire to have their consciences satisfied: and said, why tempt ye me, ye hypocrites? He calls them hypocrites, as they were, who feigned themselves just men, that they might deliver him to the power and authority of the governor; and asks them, why they tempted him, by putting such a narrow ensnaring question to him, to get an advantage against him, when they knew he had done nothing to deserve it.
+        </div>
+        <div class="right-col">
+            <ol>
+                <li>Jesus instantly penetrates their polite flattery to perceive the deep, underlying malice of their hearts.</li>
+                <li>As the omniscient God, He exposes the secret springs of their deceptive, entrapment-oriented actions.</li>
+                <li>He openly convicts them as religious hypocrites who simulate righteousness merely to deliver Him to civil execution.</li>
+                <li>He rebukes their wicked audacity in attempting to test and trap Him without just cause.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- VERSE 19 -->
+    <div class="verse-row">
+        <div class="verse-label">Matthew 22:19</div>
+        <div class="left-col">
+            Show me the tribute money,.... The coin that was exacted of them for tribute: and they brought unto him a penny; a Roman denarius, which was value of seven pence halfpenny of our money; and was the tax paid by each person, or the poll money: this they had ready at hand, and could easily produce, being a piece of money commonly current among them, and which they used in their civil and commercial affairs.
+        </div>
+        <div class="right-col">
+            <ol>
+                <li>Christ commands the conspirators to produce the specific coin used for the imperial tax.</li>
+                <li>They provide a Roman denarius, which represents the standard amount assessed per person for the poll tax.</li>
+                <li>The immediate availability of this coin reveals its common use and currency in their daily commerce.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- VERSE 20 -->
+    <div class="verse-row">
+        <div class="verse-label">Matthew 22:20</div>
+        <div class="left-col">
+            And he saith unto them, whose is this image and superscription?.... For the penny had an image upon it, the face of the emperor, and an inscription round it, showing who he was, and his titles; and though Christ knew whose it was, he asks the question, that they might be convicted out of their own mouths.
+        </div>
+        <div class="right-col">
+            <ol>
+                <li>Christ directs their eyes to the secular emperor's face and imperial titles stamped on the coin.</li>
+                <li>Though fully omniscient, He asks the question to compel an objective, public confession from their mouths.</li>
+                <li>This step establishes the legal and economic reality of their current political subjection.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- VERSE 21 -->
+    <div class="verse-row">
+        <div class="verse-label">Matthew 22:21</div>
+        <div class="left-col">
+            They say unto him, Caesar's,.... Tiberius Caesar's, who was at that time emperor of Rome: then saith he unto them, render therefore unto Caesar, the things which are Caesar's; and unto God, the things that are God's: by the image and inscription on the coin, they are convicted of subjection to Caesar; and since they carried on commerce, and maintained their property by the circulation of his coin, it was but just they should pay him his tribute; nor did this infringe upon their religious liberties, or contradict the law of Moses, since it was a matter of a civil nature; and as they were to be careful to give Caesar his due, they were to be no less careful to give God his due: namely, all that service, worship, and homage, which he requires, and they were obligated to perform; and which they might do, and yet pay their civil taxes; and by this wise answer, he completely avoids the snare. He does not say, it is lawful, or it is not lawful; but he argues from their own concessions, that since they were under Caesar's government, which appeared by their use of his money, they ought to give him his civil right; and yet not neglect to give God his religious right: and so he left them without any opportunity of accusing him, either to the people, or to the governor.
+        </div>
+        <div class="right-col">
+            <ol>
+                <li>They explicitly identify the image as Caesar's, admitting their practical subjection to the Roman emperor.</li>
+                <li>Christ commands the payment of civil tribute as a just return for the commercial infrastructure they utilize.</li>
+                <li>He distinguishes civil tax from religious duty, proving that secular obedience does not violate Moses' law.</li>
+                <li>He commands absolute devotion to God's worship, escaping their trap by refusing a simplistic binary answer.</li>
+                <li>His brilliant synthesis leaves the conspirators with absolutely no grounds for civil or popular accusation.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- VERSE 22 -->
+    <div class="verse-row">
+        <div class="verse-label">Matthew 22:22</div>
+        <div class="left-col">
+            When they had heard these words, they marvelled,.... At his wisdom, and the prudence of his answer; which was so well guarded, that they could take no advantage against him; and at his omniscience, who had discovered their secret wickedness and hypocrisy: and left him, and went their way; confounded and silenced, having lost their aim; and went to their masters that sent them, to report what had passed.
+        </div>
+        <div class="right-col">
+            <ol>
+                <li>The conspirators marvel deeply at Christ's immense wisdom and the flawless prudence of His defense.</li>
+                <li>They are struck by His divine omniscience, which thoroughly exposed their hidden malice.</li>
+                <li>Confounded, silenced, and entirely defeated, they depart His presence without achieving their aim.</li>
+                <li>They return empty-handed to report their profound theological failure back to their masters.</li>
+            </ol>
+        </div>
+    </div>
+
+    <footer>
+        Public Domain — Extracted from John Gill's Exposition of the Entire Bible (Originally published 1746–1763).
+    </footer>
+</div>
+
+</body>
+</html>
